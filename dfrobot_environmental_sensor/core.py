@@ -76,7 +76,9 @@ def clamp_value(x: float, lower: float, upper: float) -> float:
     return max(lower, min(upper, x))
 
 
-def map_linear(x: float, in_min: float, in_max: float, out_min: float, out_max: float) -> float:
+def map_linear(
+    x: float, in_min: float, in_max: float, out_min: float, out_max: float
+) -> float:
     """Map a value linearly from one range to another.
 
     Parameters
@@ -199,7 +201,9 @@ class EnvironmentalSensor:
         Which UV sensor variant is mounted. Defaults to ``UVSensor.LTR390UV``.
     """
 
-    def __init__(self, transport: Transport, uv_sensor: UVSensor = UVSensor.LTR390UV) -> None:
+    def __init__(
+        self, transport: Transport, uv_sensor: UVSensor = UVSensor.LTR390UV
+    ) -> None:
         self._transport = transport
         self.uv_sensor = uv_sensor
 
@@ -279,7 +283,9 @@ class EnvironmentalSensor:
         try:
             word_bytes = self._transport.read_block(reg_address, 2)
         except Exception as e:
-            raise IOError(f"Failed to read 2 bytes at register 0x{reg_address:02X}") from e
+            raise IOError(
+                f"Failed to read 2 bytes at register 0x{reg_address:02X}"
+            ) from e
         return _bytes_to_u16_big_endian(word_bytes)
 
     # ---- API ----
@@ -331,7 +337,9 @@ class EnvironmentalSensor:
             Relative humidity in percent (%RH), rounded to 2 decimals.
         """
         raw = self._read_u16(REG_HUMIDITY)
-        relative_humidity = raw / RAW_SCALE_FACTOR * PERCENTAGE_SCALE / OVERSAMPLING_FACTOR
+        relative_humidity = (
+            raw / RAW_SCALE_FACTOR * PERCENTAGE_SCALE / OVERSAMPLING_FACTOR
+        )
         return round(relative_humidity, 2)
 
     def read_uv_irradiance(self) -> float:
@@ -361,7 +369,10 @@ class EnvironmentalSensor:
         lux = raw * (
             ILLUMINANCE_COEFF_A
             + raw
-            * (ILLUMINANCE_COEFF_B + raw * (ILLUMINANCE_COEFF_C + raw * ILLUMINANCE_COEFF_D))
+            * (
+                ILLUMINANCE_COEFF_B
+                + raw * (ILLUMINANCE_COEFF_C + raw * ILLUMINANCE_COEFF_D)
+            )
         )
         return round(lux, 2)
 

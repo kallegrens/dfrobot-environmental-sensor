@@ -90,7 +90,9 @@ class I2CTransport:
             data = self._bus.read_i2c_block_data(self._addr, reg, length)
             return bytes(data)
         except Exception as e:
-            raise IOError(f"I2C read failed (reg=0x{reg:02X}, len={length}): {e}") from e
+            raise IOError(
+                f"I2C read failed (reg=0x{reg:02X}, len={length}): {e}"
+            ) from e
 
 
 class UARTTransport:
