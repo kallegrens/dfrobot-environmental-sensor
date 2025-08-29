@@ -1,9 +1,17 @@
 # 🌍 DFRobot Environmental Sensor Library
 
-![PyPI](https://img.shields.io/pypi/v/dfrobot-environmental-sensor)
-![Python Version](https://img.shields.io/pypi/pyversions/dfrobot-environmental-sensor)
-![License](https://img.shields.io/github/license/kallegrens/dfrobot-environmental-sensor)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![PyPI][pypi-badge]][pypi]
+[![Python Version][python-badge]][pypi]
+[![License][license-badge]][license]
+[![Conventional Commits][cc-badge]][cc]
+
+[pypi-badge]: https://img.shields.io/pypi/v/dfrobot-environmental-sensor
+[pypi]: https://pypi.org/project/dfrobot-environmental-sensor/
+[python-badge]: https://img.shields.io/pypi/pyversions/dfrobot-environmental-sensor
+[license-badge]: https://img.shields.io/github/license/kallegrens/dfrobot-environmental-sensor
+[license]: ./LICENSE
+[cc-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
+[cc]: https://conventionalcommits.org
 
 Python library for the multifunctional **DFRobot Environmental Sensor (SEN0500/SEN0501)**.
 
