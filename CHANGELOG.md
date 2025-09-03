@@ -5,6 +5,14 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.1.3](https://github.com/kallegrens/dfrobot-environmental-sensor/compare/v2.1.2...v2.1.3) (2025-09-03)
+
+
+### Documentation
+
+* add repository guidelines ([#16](https://github.com/kallegrens/dfrobot-environmental-sensor/issues/16)) ([fc5d522](https://github.com/kallegrens/dfrobot-environmental-sensor/commit/fc5d522682e5a18fc664f025ab8f852f438448d2))
+* remove badge structure explanation ([#14](https://github.com/kallegrens/dfrobot-environmental-sensor/issues/14)) ([fc9f40d](https://github.com/kallegrens/dfrobot-environmental-sensor/commit/fc9f40d69939d2fd46a62c84ec010d61abc601fc))
+
 ## [2.1.2](https://github.com/kallegrens/dfrobot-environmental-sensor/compare/v2.1.1...v2.1.2) (2025-08-26)
 
 
